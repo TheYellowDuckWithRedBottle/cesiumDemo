@@ -10,5 +10,8 @@
 display: none!important;
 visibility: hidden!important;
 }
-
+canvas{
+  width:100%;
+  height: 100%;
+}
 </style>

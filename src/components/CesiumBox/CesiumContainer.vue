@@ -8,13 +8,14 @@
 export default {
   name: "", 
   mounted() {
-    var viewer = new Cesium.CesiumWidget('cesiumContainer')
+      
+     Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZDdmNzAwOC04ZGUxLTQyMjMtYWYxYi0zNWM0MTIzZTIyNWYiLCJpZCI6MTI1NTksInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NjEzNTYxNTh9.vG6rFNYRYvOuRK2OFfn2n4h7hTVzfDaNyDdJSEQZ4hY";
+var viewer = new Cesium.CesiumWidget('cesiumContainer')
+       viewer.imageryLayers.addImageryProvider(new Cesium.UrlTemplateImageryProvider({
+                url: 'http://localhost:5051/img/{z}/{x}/{y}.png', //服务地址
+            }));
+       console.log(viewer)
 
-    // eslint-disable-next-line no-undef
-    //var viewer = new Cesium.Viewer("cesiumContainer");
-    
-    // eslint-disable-next-line no-console
-    console.log(viewer)
   }
 };
 </script> 
@@ -23,8 +24,16 @@ export default {
     width: 100%;
     height: 100%;
   }
-  #cesiumContainer{
+  #cesiumContainer {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
     width: 100%;
     height: 100%;
-  }
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 </style>
