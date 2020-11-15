@@ -1,4 +1,4 @@
-# vuedemo
+# rebuild
 
 ## Project setup
 ```
