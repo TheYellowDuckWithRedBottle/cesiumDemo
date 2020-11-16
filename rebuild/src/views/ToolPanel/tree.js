@@ -8,7 +8,7 @@ export default  [{
             id: 'osgb_suqian',
             label: '实景三维',
             type: '3DTiles',
-            url: 'http://10.1.102.20:8080/Data/SWLPB/tileset.json'
+            url: 'http://localhost:5052/SWLPB/tileset.json'
           },
           {
             id: 3,
@@ -22,22 +22,22 @@ export default  [{
                     id: 'SuQian_DZ_up',
                     label: '地上宗地',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/ZD/up/tileset.json'
+                    url: 'http://localhost:5052/SWDJ/ZD/up/tileset.json'
                   },
                   {
                     id: 'SuQian_DZ_down',
                     label: '地下宗地',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/ZD/down/tileset.json'
+                    url: 'http://localhost:5052/SWDJ/ZD/down/tileset.json'
                   },
                   {
                     id: 'SuQian_JZX',
                     label: '界址线',
                     type: 'Geojson',
                     url: {
-                      url1: 'http://10.1.102.20:8080/Data/SWDJ/321302/ZD/JSON/001013GB00858_JZX_up.json',
-                      url2: 'http://10.1.102.20:8080/Data/SWDJ/321302/ZD/JSON/001013GB00858_JZX_surface.json',
-                      url3: 'http://10.1.102.20:8080/Data/SWDJ/321302/ZD/JSON/001013GB00858_JZX_down.json'
+                      url1: 'http://localhost:5052/SWDJ/ZD/JSON/001013GB00858_JZX_up.json',
+                      url2: 'http://localhost:5052/SWDJ/ZD/JSON/001013GB00858_JZX_surface.json',
+                      url3: 'http://localhost:5052/SWDJ/ZD/JSON/001013GB00858_JZX_down.json'
                     }
                   },
                   {
@@ -45,9 +45,9 @@ export default  [{
                     label: '界址点',
                     type: 'Geojson',
                     url: {
-                      url1: 'http://10.1.102.20:8080/Data/SWDJ/321302/ZD/JSON/001013GB00858_JZD_up.json',
-                      url2: 'http://10.1.102.20:8080/Data/SWDJ/321302/ZD/JSON/001013GB00858_JZD_surface.json',
-                      url3: 'http://10.1.102.20:8080/Data/SWDJ/321302/ZD/JSON/001013GB00858_JZD_down.json'
+                      url1: 'http://localhost:5052/SWDJ/ZD/JSON/001013GB00858_JZD_up.json',
+                      url2: 'http://localhost:5052/SWDJ/ZD/JSON/001013GB00858_JZD_surface.json',
+                      url3: 'http://localhost:5052/SWDJ/ZD/JSON/001013GB00858_JZD_down.json'
                     }
                   },
                 ]
@@ -60,8 +60,8 @@ export default  [{
                     id: 'eastSide',
                     label: '0001',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/ST/0001/tileset.json',
-                    CQurl: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/CQ/0001/tileset.json',
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/ST/0001/tileset.json',
+                    CQurl: 'http://localhost:5052/SWDJ/001013GB00858/CQ/0001/tileset.json',
                     floor: 19,
                     queryFloorField: 'Floor',
                     queryCQFloorField: 'IfcSpatialContainer'
@@ -70,8 +70,8 @@ export default  [{
                     id: 'middle',
                     label: '0002',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/ST/0002/tileset.json',
-                    CQurl: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/CQ/0002/tileset.json',
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/ST/0002/tileset.json',
+                    CQurl: 'http://localhost:5052/SWDJ/001013GB00858/CQ/0002/tileset.json',
                     floor: 17,
                     queryFloorField: 'Floor',
                     queryCQFloorField: 'IfcSpatialContainer'
@@ -81,8 +81,8 @@ export default  [{
                     id: 'westSide',
                     label: '0003',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/ST/0003/tileset.json',
-                    CQurl: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/CQ/0003/tileset.json',
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/ST/0003/tileset.json',
+                    CQurl: 'http://localhost:5052/SWDJ/001013GB00858/CQ/0003/tileset.json',
                     floor: 4,
                     queryFloorField: 'Floor',
                     queryCQFloorField: 'IfcSpatialContainer'
@@ -91,8 +91,8 @@ export default  [{
                     id: 'underground',
                     label: '0004',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/ST/0004/tileset.json',
-                    CQurl: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/CQ/0004/tileset.json',
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/ST/0004/tileset.json',
+                    CQurl: 'http://localhost:5052/SWDJ/001013GB00858/CQ/0004/tileset.json',
                     floor: 1,
                     queryFloorField: 'Floor',
                     queryCQFloorField: 'IfcSpatialContainer'
@@ -108,25 +108,25 @@ export default  [{
                     id: 'eastSide_cq',
                     label: '0001',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/CQ/0001/tileset.json'
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/CQ/0001/tileset.json'
                   },
                   {
                     id: 'middle_cq',
                     label: '0002',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/CQ/0002/tileset.json'
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/CQ/0002/tileset.json'
                   },
                   {
                     id: 'westSide_cq',
                     label: '0003',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/CQ/0003/tileset.json'
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/CQ/0003/tileset.json'
                   },
                   {
                     id: 'underground_cq',
                     label: '0004',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/CQ/0004/tileset.json'
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/CQ/0004/tileset.json'
                   },
                 ]
               },
@@ -138,19 +138,19 @@ export default  [{
                     id: 'eastSide_swlpb',
                     label: '0001',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/LP/0001/tileset.json',
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/LP/0001/tileset.json',
                   },
                   {
                     id: 'middle_swlpb',
                     label: '0002',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/LP/0002/tileset.json',
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/LP/0002/tileset.json',
                   },
                   {
                     id: 'westSide_swlpb',
                     label: '0003',
                     type: '3DTiles',
-                    url: 'http://10.1.102.20:8080/Data/SWDJ/321302/001013GB00858/LP/0003/tileset.json',
+                    url: 'http://localhost:5052/SWDJ/001013GB00858/LP/0003/tileset.json',
                   }
                 ]
               },

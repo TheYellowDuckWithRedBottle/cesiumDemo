@@ -1,7 +1,7 @@
 <template>
   <div class="SideBar">
 <!-- 菜单栏的盒子 -->
-    <div v-drag class="SideBarContainer" ref="SideBar">
+    <div class="SideBarContainer" ref="SideBar">
         <!-- 左侧的图标栏 -->
       <div class="iconContainer">
          <tabControl @tabClick="switchPanel"/>
@@ -48,12 +48,15 @@ export default {
   directives: {
     drag(el, bindings) {
       el.onmousedown = function(e) {
+        console.log(e)
         var disx = e.pageX - el.offsetLeft;
         var disy = e.pageY - el.offsetTop;
         document.onmousemove = function(e) {
+          console.log(e)
           el.style.left = e.pageX - disx + "px";
           el.style.cursor = "move";
           el.style.top = e.pageY - disx + "px";
+        
         };
         document.onmouseup = function() {
           el.style.cursor = "default";

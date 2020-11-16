@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import {addData} from '@/common/addData'
+import {add3DTilesetData,remove3DTilesetData} from '@/common/addData'
 import config from './tree'
 export default {
     name:'panel',
@@ -36,23 +36,31 @@ export default {
     }
   },
   mounted(){
+    
     console.log(config[0])
   },
   methods: {
     nodeChange(node,isSelect){
-      console.log(node)
+       let viewer = window.cesiumViewer
       if(isSelect){
-        switch (node.tree) {
-          case value:
-            
+        switch (node.type) {
+          case "3DTiles":
+            add3DTilesetData(viewer, node.url)
             break;
         
           default:
             break;
         }
       }
-      
-      console.log(obj)
+      else{
+        switch (node.type) {
+          case '3DTiles':
+            remove3DTilesetData(viewer, node.url)
+            break;
+           default:
+            break;
+      }
+      }
     },
       getCheckedNodes() {
         console.log(this.$refs.tree.getCheckedNodes());
