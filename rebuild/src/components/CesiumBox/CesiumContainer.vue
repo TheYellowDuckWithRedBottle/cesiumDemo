@@ -10,15 +10,31 @@ export default {
   mounted() {
     
      Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZDdmNzAwOC04ZGUxLTQyMjMtYWYxYi0zNWM0MTIzZTIyNWYiLCJpZCI6MTI1NTksInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NjEzNTYxNTh9.vG6rFNYRYvOuRK2OFfn2n4h7hTVzfDaNyDdJSEQZ4hY";
-      var viewer = new Cesium.CesiumWidget('cesiumContainer')
+     let imageryProvider=  new Cesium.UrlTemplateImageryProvider({
+                url: 'http://localhost:5052/Img/{z}/{x}/{y}.png', //服务地址
+            });
+       
+       const viewer = new Cesium.Viewer('cesiumContainer', {
+        terrainExaggeration:0.95,
+        imageryProvider: imageryProvider,
+        terrainProvider: terrainProvider,
+        baseLayerPicker: false,
+        fullscreenButton: false,
+        geocoder: false,
+        homeButton: false,
+        navigationHelpButton: false,
+        sceneModePicker: false,
+        timeline: false,
+        animation: false,
+        selectionIndicator: false,
+        infoBox: false
+      })
+
       var terrainProvider = new Cesium.CesiumTerrainProvider({
         url: "http://localhost:7070/DATA/DEM",
         requestWaterMask: true //请求水波纹效果
       })
-       viewer.imageryLayers.addImageryProvider(new Cesium.UrlTemplateImageryProvider({
-                url: 'http://localhost:5052/img/{z}/{x}/{y}.png', //服务地址
-            }));
-       console.log(viewer)
+       
       viewer.camera.setView({
         destination:Cesium.Cartesian3.fromDegrees(99,36.4,18000008),
         orientataion:{}

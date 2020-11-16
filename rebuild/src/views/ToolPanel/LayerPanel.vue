@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import {add3DTilesetData,remove3DTilesetData} from '@/common/addData'
+import {add3DTilesetData,remove3DTilesetData,get3DTilesData} from '@/common/addData'
 import config from './tree'
 export default {
     name:'panel',

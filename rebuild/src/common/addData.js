@@ -54,3 +54,32 @@ export function remove3DTilesetData(viewer, url) {
         }
     }
 }
+//根据Url获取viewer中的imageLayer
+export function getImageData(viewer,url){
+    let image
+    for (let i  = 0; i < viewer.imageryLayer._layer.length; i++) {
+        let layer=viewer.imageryLayer._layer[i]
+        if(url==layer._imageryProvider.url){
+            image=layer
+        }
+    }
+    return image
+}
+//viewer中的terrainProvider是唯一的，有且只有一个
+export function getTerrainData(viewer,url){
+    return viewer.terrainProvider
+}
+export function get3DTilesData(viewer,url){
+    let tileset
+    let primitives=viewer.scene.primitives
+    for (let i = 0; i < primitives.length; i++) {
+        if(primitives._primitives[i]._url==url){
+            tileset=primitives._primitives[i]
+        }
+    }
+    return tileset
+}
+
+export function focusPosition(viewer,nodeData){
+    viewer.zoomTo(nodeData)
+}
