@@ -13,11 +13,15 @@ export default {
      let imageryProvider=  new Cesium.UrlTemplateImageryProvider({
                 url: 'http://localhost:5052/Img/{z}/{x}/{y}.png', //服务地址
             });
+        var terrainProvider = new Cesium.CesiumTerrainProvider({
+        url: "http://localhost:5053/DATA/DEM",
+        requestWaterMask: true //请求水波纹效果
+      })
        
        const viewer = new Cesium.Viewer('cesiumContainer', {
         terrainExaggeration:0.95,
         imageryProvider: imageryProvider,
-        terrainProvider: terrainProvider,
+        terrainProvider:terrainProvider,
         baseLayerPicker: false,
         fullscreenButton: false,
         geocoder: false,
@@ -30,11 +34,7 @@ export default {
         infoBox: false
       })
 
-      var terrainProvider = new Cesium.CesiumTerrainProvider({
-        url: "http://localhost:7070/DATA/DEM",
-        requestWaterMask: true //请求水波纹效果
-      })
-       
+     
       viewer.camera.setView({
         destination:Cesium.Cartesian3.fromDegrees(99,36.4,18000008),
         orientataion:{}
