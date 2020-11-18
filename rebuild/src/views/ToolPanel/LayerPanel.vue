@@ -36,18 +36,18 @@ export default {
     }
   },
   mounted(){
-
+  
   },
   methods: {
     nodeChange(node,isSelect){
        let viewer = window.cesiumViewer
-       console.log(node)
+      
       if(isSelect){
         switch (node.type) {
           case "3DTiles":
-            console.log(node)
             add3DTilesetData(viewer, node.url)
             break;
+        
           default:
             break;
         }
@@ -55,7 +55,7 @@ export default {
       else{
         switch (node.type) {
           case '3DTiles':
-            //remove3DTilesetData(viewer, node.url)
+            remove3DTilesetData(viewer, node.url)
             break;
            default:
             break;
