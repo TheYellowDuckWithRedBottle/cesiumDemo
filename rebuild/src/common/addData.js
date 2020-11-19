@@ -34,6 +34,52 @@ export function add3DTilesetDataForOsgb(viewer,url){
         viewer.zoomTo(tileset,new HeadingPitchRange(0.0,-0.5,tileset.boundingSphere.radius/1.0))
     })
 }
+
+
+export function addGeojsonData(viewer,url){
+    let color=new Cesium.Color(0,1,0,0.7)
+    let color1=new Cesium.Color(1,0,0,0.7)
+    let color2=new Cesium.Color(0,0,1,0.7)
+
+}
+export function addGeojsonJZXItem(viewer,url){
+    let geojsonOptions={
+        clampToGround:false
+    }
+     let GeoJsonData=new Cesium.GeoJsonDataSource("data")
+    let promise1= GeoJsonData.load(url.url1,geojsonOptions)
+    let dataPromise=Cesium.GeoJsonDataSource.load(url.url1,geojsonOptions)
+    promise1.then(function(dataSource){
+        console.log(dataSource)
+        viewer.dataSources.add(dataSource)
+        let neigborhoodEntities=dataSource.entities.values;
+        for (const item of neigborhoodEntities) {
+            if(item.polyline){
+                item.polyline.material=new Cesium.Color(0,1,0,0.7)
+            }else{
+                item.billboard=undefined
+                item.point=new Cesium.PointGraphics({
+                    color:new Cesium.Color(0,1,0,0.7),
+                    pixelSize:5
+                })
+                let jzdNo=item.properties.JZDNO._value
+                 item.label=({
+                    text: jzdNo,
+                    color : Color.YELLOW,
+                    font:'normal 32px MicroSoft YaHei',
+                    showBackground : false,
+                    scaleByDistance: new NearFarScalar(400, 1, 1800, 0),
+                    scale : 0.5,
+                    horizontalOrigin : HorizontalOrigin.LEFT_CLICK,
+                    verticalOrigin : VerticalOrigin.BOTTOM,
+                    distanceDisplayCondition : new DistanceDisplayCondition(0.0, 1000.0),
+                    eyeOffset: new Cartesian3(0, 0, -10)
+                 })
+            }
+        }
+    })
+
+}
 export function remove3DTilesetData(viewer, url) {
     var primitives = viewer.scene.primitives
     console.log(primitives)

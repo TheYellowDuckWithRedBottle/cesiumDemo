@@ -21,7 +21,7 @@ export default {
        const viewer = new Cesium.Viewer('cesiumContainer', {
         terrainExaggeration:0.95,
         imageryProvider: imageryProvider,
-        terrainProvider:terrainProvider,
+        terrainProvider: terrainProvider,
         baseLayerPicker: false,
         fullscreenButton: false,
         geocoder: false,

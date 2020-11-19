@@ -16,7 +16,11 @@
 </template>
 
 <script>
-import {add3DTilesetData,remove3DTilesetData,get3DTilesData} from '@/common/addData'
+import {add3DTilesetData,
+remove3DTilesetData,
+get3DTilesData,
+addGeojsonJZXItem
+} from '@/common/addData'
 import config from './tree'
 export default {
     name:'panel',
@@ -48,6 +52,9 @@ export default {
             console.log(node)
             add3DTilesetData(viewer, node.url)
             break;
+          case "Geojson":
+            console.log(node)
+            addGeojsonJZXItem(viewer,node.url)
           default:
             break;
         }
