@@ -1,6 +1,12 @@
 // import {Cesium3DTileset} from 'cesium/Source/Cesium'
 
 export function add3DTilesetData(viewer,url){
+    let isAdded = get3DTilesData(viewer,url)
+    if(isAdded!=undefined){
+        console.log("当前数据已加载")
+    }
+    else {
+        console.log("还未加载数据")
     var tileset =new Cesium.Cesium3DTileset({
         url:url
     });
@@ -23,6 +29,8 @@ export function add3DTilesetData(viewer,url){
             tileset.style = XINYI_CLASSIF_MODEL_STYLE
         }
     });
+           
+}
 }
 export function add3DTilesetDataForOsgb(viewer,url){
     let tileset=viewer.scene.primitives.add(
@@ -40,6 +48,18 @@ export function addGeojsonData(viewer,url){
     let color=new Cesium.Color(0,1,0,0.7)
     let color1=new Cesium.Color(1,0,0,0.7)
     let color2=new Cesium.Color(0,0,1,0.7)
+
+}
+export function removeGeojson(viewer,url){
+    let dataSource=viewer.dataSources._dataSources;
+    if(SUQIAN_JZX_JSONURL.indexOf(url.url1)>-1){
+        for(let i=dataSources.length-1;i>0;i--){
+            let dataSource=dataSourceS[I]
+            if(SUQIAN_JZX_NAME.indexOf(dataSource._name)>-1){
+                viewer.dataSources.remove(dataSource);
+            }
+        }
+    }
 
 }
 export function addGeojsonJZXItem(viewer,url){
@@ -81,14 +101,20 @@ export function addGeojsonJZXItem(viewer,url){
 
 }
 export function remove3DTilesetData(viewer, url) {
+   let isAdded = get3DTilesData(viewer,url)
+   if(isAdded!=undefined){//说明存在，存在就移除
     var primitives = viewer.scene.primitives
-    console.log(primitives)
     for (var i = 0; i < primitives.length; i++) {
         if (primitives._primitives[i]._url == url) {
             viewer.scene.primitives.remove(primitives._primitives[i])
         }
     }
+   }else{
+       console.log("当前场景中不存在此数据")
+   }
+    
 }
+
 //根据Url获取viewer中的imageLayer
 export function getImageData(viewer,url){
     let image

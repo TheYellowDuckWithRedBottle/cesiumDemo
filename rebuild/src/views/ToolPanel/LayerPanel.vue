@@ -62,7 +62,7 @@ export default {
       else{
         switch (node.type) {
           case '3DTiles':
-            //remove3DTilesetData(viewer, node.url)
+            remove3DTilesetData(viewer, node.url)
             break;
            default:
             break;
@@ -95,7 +95,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .layerPnael{
   margin:5px;
 }

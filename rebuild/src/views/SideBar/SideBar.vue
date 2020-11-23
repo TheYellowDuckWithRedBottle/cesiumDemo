@@ -68,29 +68,34 @@ export default {
 };
 </script>
 
+
 <style>
 .SideBarContainer {
   position: relative;
-  z-index: 3;
+  z-index: 999;
   width:200px;
   display: flex;
   justify-content: space-around;
-  height: 150px;
-  background-color: white;
+  height: 200px;
+
   top: 150px;
   left: 30px;
-  border-radius: 10px 0 0 10px;
+ 
   box-shadow: 0 3 0px gray;
 }
 .contentContainer {
   float: right;
   width: 100%;
+  background-color: #fff;
 }
 .iconContainer {
     width: 30px;
     margin-left: 3px;
+    height: 150px;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
+   border-radius: 10px 0 0 10px;
   justify-content: space-around;
 }
 </style>
