@@ -70,6 +70,10 @@ export default {
 
 
 <style>
+.SideBar{
+  margin:0;
+  padding:0;
+}
 .SideBarContainer {
   position: relative;
   z-index: 999;

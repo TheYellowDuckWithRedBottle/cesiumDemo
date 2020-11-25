@@ -5,22 +5,22 @@
          <span>图形标绘</span>
         </div>
          <div class="drawItem">
-            <button class="point">标记点</button>
-            <button class="polyline">标记线</button>
-            <button class="polygon">标记面</button>
+            <button class="point">点</button>
+            <button class="polyline">线</button>
+            <button class="polygon">面</button>
             
           </div>
           <div class="clearItem">
-            
-              <small>清除标绘结果</small>
+              <el-button>清除标绘结果</el-button>
           </div>
       </div>
+
       <div class="infoDraw">
         <div class="title">
          <span>信息标绘</span>
         </div>
          <div class="drawItem">
-
+           <button>标绘信息</button>
           </div>
           <div class="clearItem">
 
