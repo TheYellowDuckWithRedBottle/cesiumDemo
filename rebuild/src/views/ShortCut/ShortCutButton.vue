@@ -1,11 +1,11 @@
 <template>
-    <div class="shortContainer">
+    <div class="ShortCutContainer">
         
     </div>
 </template>
 <script>
 export default {
-    name:'ButtonContainer'
+    
 }
 </script>
 <style scoped>
