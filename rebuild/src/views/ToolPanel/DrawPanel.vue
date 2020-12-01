@@ -1,5 +1,5 @@
 <template>
-  <div class="layerPanel">
+  <div class="drawPanel">
       <div class="graphDraw">
         <div class="title">
          <span>图形标绘</span>
@@ -12,7 +12,7 @@
           </div>
           <div class="clearItem">
             
-              <small>清除标绘结果</small>
+              <button>清除标绘结果</button>
           </div>
       </div>
       <div class="infoDraw">
@@ -37,36 +37,38 @@ export default {
 </script>
 
 <style scoped>
-.graphDraw{
-  height: 60%;
-}
-.layerPanel{
+
+.drawPanel{
   text-align: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin:5px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
 }
 .drawItem{
   display:flex;
   justify-content: space-around;
   align-items: center;
 }
-.span{
-  font-size: 5px;
-}
+
 .clearItem{
   display:flex;
    justify-content: space-around;
   
 }
 .point{
-  font-size: 1px;
+  font-size: 10px;
 }
 button{
   width:50px;
-  height: 20px;
+  height: 18px;
   
 }
+.graphDraw{
+ 
+}
 .infoDraw{
-  height: 40%;
+  
 }
 </style>

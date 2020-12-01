@@ -7,6 +7,7 @@
 
 <script>
 // @ is an alias to /src
+import NavBar from '@/views/NavBar/NavBar'
 import SideBar from '@/views/SideBar/SideBar'
 import CesiumContainer from '@/components/CesiumBox/CesiumContainer'
 export default {
