@@ -3,6 +3,7 @@
     <NavBar/>
     <SideBar/>
     <CesiumContainer/>
+    <ButtonContainer/>
   </div>
 </template>
 
@@ -11,12 +12,14 @@
 import NavBar from '@/views/NavBar/NavBar'
 import SideBar from '@/views/SideBar/SideBar'
 import CesiumContainer from '@/components/CesiumBox/CesiumContainer'
+import ButtonContainer from '@/views/ShortCutButton/ButtonContainer'
 export default {
   name: 'Home',
   components: {
     CesiumContainer,
     SideBar,
-    NavBar
+    NavBar,
+    ButtonContainer
   }
 }
 </script>
