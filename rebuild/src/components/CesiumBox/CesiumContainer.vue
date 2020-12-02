@@ -96,7 +96,7 @@ export default {
               //  url: 'http://localhost:5050/Tile/{x}/{y}/{z}', //服务地址
             });
         var terrainProvider = new Cesium.CesiumTerrainProvider({
-        url: "http://localhost:5053/DATA/DEM",
+        url: "http://localhost:5052/DATA/DEM",
         requestWaterMask: true //请求水波纹效果
       })
        
