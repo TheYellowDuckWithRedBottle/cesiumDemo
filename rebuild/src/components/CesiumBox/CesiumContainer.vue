@@ -91,12 +91,12 @@ export default {
     
      Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZDdmNzAwOC04ZGUxLTQyMjMtYWYxYi0zNWM0MTIzZTIyNWYiLCJpZCI6MTI1NTksInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NjEzNTYxNTh9.vG6rFNYRYvOuRK2OFfn2n4h7hTVzfDaNyDdJSEQZ4hY";
      let imageryProvider=  new Cesium.UrlTemplateImageryProvider({
-                url: 'http://localhost:5053/DATA/Img/{z}/{x}/{y}.png', //服务地址
+                url: 'http://localhost:5052/DATA/Img/{z}/{x}/{y}.png', //服务地址
                //url: 'http://localhost:5052/Img/{z}/{x}/{y}.png', //服务地址
               //  url: 'http://localhost:5050/Tile/{x}/{y}/{z}', //服务地址
             });
         var terrainProvider = new Cesium.CesiumTerrainProvider({
-        url: "http://localhost:5052/DATA/DEM",
+        url: "http://localhost:5053/DATA/DEM",
         requestWaterMask: true //请求水波纹效果
       })
        

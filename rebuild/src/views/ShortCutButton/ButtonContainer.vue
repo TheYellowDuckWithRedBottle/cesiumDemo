@@ -11,10 +11,37 @@
 export default {
     name:'ButtonContainer',
     methods: {
-        backHome(){},
+        getCarmeraHeigth(){
+            let viewer=window.cesiumViewer
+            let cameraPosition=viewer.camera.position
+            let cartographic=viewer.scene.globe.ellipsoid.cartesianToCartographic(cameraPosition)
+            let height=cartographic.height
+            let cameraLon=cartographic.longitude
+            let cameraLat=cartographic.latitude
+            return {longtitude,latitude,height}
+        },
+        backHome(){
+            window.cesiumViewer.camera.flyTo({
+                destination:Cesium.Cartesian3.fromDegrees(119,36,2000),
+              //   Cesium.Cartesian3.fromDegrees(longitude, latitude, height, ellipsoid, result)
+                orientation:{
+                    
+                }
+            })
+        },
         arrowNorth(){},
-        scalExpand(){},
-        scalCompress(){},
+        scalExpand(){
+            let position=this.getCarmeraHeigth();
+            window.cesiumViewer.camera.flyTo({
+                destination:Cesium.Cartesian3.fromDegrees(position.longtitude,position.latitude,height/2)
+            })
+        },
+        scalCompress(){
+            let position=this.getCarmeraHeigth();
+            window.cesiumViewer.camera.flyTo({
+                destination:Cartesian3.fromDegrees(position.longtitude,position.latitude,height*2)
+            })
+        },
         fulllScene(){}
     },
 }
