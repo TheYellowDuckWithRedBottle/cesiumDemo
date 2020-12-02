@@ -1,7 +1,7 @@
 <template>
     <div class="shortContainer">
         <div class="ShortTool">
-            <div><i class="fa fa-bars"></i></div>
+            <div @mouseover="isImageLayerShow=true"><i class="fa fa-bars"></i></div>
             <div><i class="fa fa-table"></i></div>
             <div><i class="fa fa-area-chart"></i></div>
             <div><i class="fa fa-window-restore"></i></div>
@@ -13,11 +13,23 @@
         <div class="scaleLess" @click="scalCompress"><i class="fa fa-compress"></i></div>
         <div class="scaleAll" @click="fulllScene"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
         </div>
+        <ImagerLayer v-show="isImageLayerShow"/>
     </div>
 </template>
 <script>
+import ImagerLayer from '@/views/ShortCutButton/ImageLayer'
+import ImageLayer from './ImageLayer.vue'
 export default {
     name:'ButtonContainer',
+    data() {
+        return {
+            isImageLayerShow:false
+        }
+    },
+    components:{
+        ImagerLayer
+        
+    },
     methods: {
         getCarmeraHeigth(){
             let viewer=window.cesiumViewer
