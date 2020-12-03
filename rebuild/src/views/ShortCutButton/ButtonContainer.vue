@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div class="shortContainer">
         <div class="ShortTool">
             <div @mouseover="isImageLayerShow=true"><i class="fa fa-bars"></i></div>
@@ -13,7 +14,8 @@
         <div class="scaleLess" @click="scalCompress"><i class="fa fa-compress"></i></div>
         <div class="scaleAll" @click="fulllScene"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
         </div>
-        <ImagerLayer v-show="isImageLayerShow"/>
+        </div>
+    <ImagerLayer v-show="isImageLayerShow" @leaveMouse="leaveImage"/>
     </div>
 </template>
 <script>
@@ -28,9 +30,13 @@ export default {
     },
     components:{
         ImagerLayer
-        
+
     },
     methods: {
+        leaveImage(){
+            console.log("good")
+            this.isImageLayerShow=false
+        },
         getCarmeraHeigth(){
             let viewer=window.cesiumViewer
             let cameraPosition=viewer.camera.position
