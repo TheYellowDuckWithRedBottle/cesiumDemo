@@ -1,10 +1,14 @@
 <template>
   <div class="Analysis">
+    
+       <el-button type="primary" size="mini" @click="showPie">按照行政区统计</el-button>
+       <el-button  type="primary" size="mini" @click="showPie">按照权属性质统计</el-button>
      
   </div>
 </template>
 
 <script>
+
 export default {
     name:'Analysis',
     data(){
@@ -24,6 +28,9 @@ export default {
       
     },
     methods:{
+      showPie(){
+       this.$store.commit('changeStaticShow',true)
+      },
       createPoint(worldPosition){
         var point = viewer.entities.add({
                 position: worldPosition,
@@ -44,7 +51,9 @@ export default {
 </script>
 
 <style scoped>
-.layerPanel{
-
+.Analysis{
+  padding:10px;
+  display: flex;
+  flex-direction: column;
 }
 </style>
