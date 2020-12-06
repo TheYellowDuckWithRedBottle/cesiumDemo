@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import ImageItem from '@/views/ShortCutButton/ImageItem'
+import ImageItem from '@/views/Home/ShortCutButton/ImageItem'
 export default {
     components:{
           ImageItem     

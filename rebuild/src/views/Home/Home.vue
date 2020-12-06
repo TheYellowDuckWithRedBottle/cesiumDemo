@@ -10,10 +10,10 @@
 
 <script>
 // @ is an alias to /src
-import NavBar from '@/views/NavBar/NavBar'
-import SideBar from '@/views/SideBar/SideBar'
+import NavBar from '@/views/Home/NavBar/NavBar'
+import SideBar from '@/views/Home/SideBar/SideBar'
 import CesiumContainer from '@/components/CesiumBox/CesiumContainer'
-import ButtonContainer from '@/views/ShortCutButton/ButtonContainer'
+import ButtonContainer from '@/views/Home/ShortCutButton/ButtonContainer'
 import Static from '@/views/Static/Static'
 export default {
   name: 'Home',

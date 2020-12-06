@@ -19,7 +19,7 @@
     </div>
 </template>
 <script>
-import ImagerLayer from '@/views/ShortCutButton/ImageLayer'
+import ImagerLayer from '@/views/Home/ShortCutButton/ImageLayer'
 import ImageLayer from './ImageLayer.vue'
 export default {
     name:'ButtonContainer',

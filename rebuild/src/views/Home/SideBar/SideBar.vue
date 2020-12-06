@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Analysis from '@/views/ToolPanel/Analysis'
+import Analysis from '@/views/ToolPanel/AnalysisPanel'
 import DrawPanel from '@/views/ToolPanel/DrawPanel'
 import LayerPanel from '@/views/ToolPanel/LayerPanel'
 import Setting from '@/views/ToolPanel/Setting'
